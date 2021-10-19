@@ -672,6 +672,7 @@ h1, h2, h3, h4, h5, h6 {
 /* --------------------------------*/
 .signals {
   background-color: #000;
+  padding-bottom: 130px;
 }
 
 .signal__title {
@@ -755,5 +756,184 @@ h1, h2, h3, h4, h5, h6 {
     -ms-flex-pack: distribute;
         justify-content: space-around;
   }
+}
+
+/* light-part-wrapper */
+.light-part-wrapper {
+  min-height: 3000px;
+  position: relative;
+  background-image: url("/images/texture-light-part.jpg");
+}
+
+/* Section curve-line */
+.curve-line__wrapper {
+  position: relative;
+}
+
+.curve-line__img-1 {
+  position: absolute;
+  bottom: 3px;
+  left: 30px;
+}
+
+.curve-line__img-2 {
+  width: 60px;
+  position: absolute;
+  bottom: 25px;
+  left: 170px;
+}
+
+.curve-line__img-3 {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+@media (max-width: 1125px) {
+  .curve-line__img-3 {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) {
+  .curve-line__img-1 {
+    width: 40px;
+    bottom: 25px;
+    left: 20px;
+  }
+  .curve-line__img-2 {
+    width: 30px;
+    bottom: 34px;
+    left: 100px;
+  }
+}
+
+.curve {
+  /* curve -> https://bennettfeely.com/clippy/ */
+  min-height: 300px;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 40%, 0 87%);
+          clip-path: polygon(0 0, 100% 0, 100% 40%, 0 87%);
+  background-color: #000;
+}
+
+@media (max-width: 1125px) {
+  .curve {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 55%, 0 87%);
+            clip-path: polygon(0 0, 100% 0, 100% 55%, 0 87%);
+  }
+}
+
+@media (max-width: 750px) {
+  .curve {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 63%, 0 87%);
+            clip-path: polygon(0 0, 100% 0, 100% 63%, 0 87%);
+  }
+}
+
+@media (max-width: 600px) {
+  .curve {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 69%, 0 87%);
+            clip-path: polygon(0 0, 100% 0, 100% 69%, 0 87%);
+  }
+}
+
+/* Section faq */
+@-webkit-keyframes faq-dropdown-down {
+  from {
+    height: 0px;
+    opacity: 0;
+  }
+  to {
+    height: 100%;
+    opacity: 1;
+  }
+}
+@keyframes faq-dropdown-down {
+  from {
+    height: 0px;
+    opacity: 0;
+  }
+  to {
+    height: 100%;
+    opacity: 1;
+  }
+}
+
+.faq__title {
+  text-align: center;
+  font-family: 'Roboto-Black', Arial, Helvetica;
+  text-transform: uppercase;
+  font-size: 36px;
+}
+
+.faq__dropdown {
+  margin-top: 150px;
+  margin-left: 200px;
+}
+
+.faq__dropbtn-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.faq__dropbtn-img {
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.faq__dropbtn {
+  border: none;
+  background-color: transparent;
+  font-family: 'Roboto-Bold', Arial, Helvetica;
+  font-size: 20px;
+}
+
+.faq__dropbtn:hover {
+  cursor: pointer;
+}
+
+.faq__dropdown-content {
+  height: 0px;
+  opacity: 0;
+  overflow: hidden;
+  font-family: 'Roboto-Light', Arial, Helvetica;
+  font-size: 19px;
+  max-width: 400px;
+  padding: 10px 0px 10px 40px;
+}
+
+@media (max-width: 1125px) {
+  .faq__dropdown {
+    margin-left: 100px;
+  }
+}
+
+@media (max-width: 900px) {
+  .faq__dropdown {
+    margin-left: 20px;
+  }
+  .faq__dropbtn {
+    font-size: 16px;
+  }
+}
+
+.faq-show {
+  -webkit-animation: faq-dropdown-down;
+          animation: faq-dropdown-down;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+.faq-rotate {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 /*# sourceMappingURL=style.css.map */

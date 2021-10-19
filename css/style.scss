@@ -591,6 +591,7 @@ h1,h2,h3,h4,h5,h6{
        
 .signals{
   background-color: #000;
+  padding-bottom: 130px;
 }
 .signal__title{
   text-align: center;
@@ -646,4 +647,155 @@ h1,h2,h3,h4,h5,h6{
   .signal-item{
     justify-content: space-around;
   }
+}
+
+/* light-part-wrapper */
+
+.light-part-wrapper{
+  min-height: 3000px;
+  position: relative;
+  background-image: url("/images/texture-light-part.jpg");
+}
+
+/* Section curve-line */
+
+.curve-line{
+  &__wrapper{
+    position: relative;
+  }
+  &__img-1{
+    position: absolute;
+    bottom: 3px;
+    left: 30px;
+  }
+  &__img-2{
+    width: 60px;
+    position: absolute;
+    bottom: 25px;
+    left: 170px;
+  }
+  &__img-3{
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+  }
+}
+@media(max-width:1125px){
+  .curve-line{
+      &__img-3{
+      display: none;
+    }
+  }
+}
+@media(max-width:750px){
+.curve-line{
+  &__img-1{
+    width: 40px;
+    bottom: 25px;
+    left: 20px;
+  }
+  &__img-2{
+    width: 30px;
+    bottom: 34px;
+    left: 100px;
+  }
+}
+}
+
+.curve{
+  /* curve -> https://bennettfeely.com/clippy/ */
+  min-height: 300px;
+  clip-path: polygon(0 0, 100% 0, 100% 40%, 0 87%);
+  background-color: #000;
+ }
+ @media(max-width:1125px){
+  .curve{
+    clip-path: polygon(0 0, 100% 0, 100% 55%, 0 87%);
+  }
+}
+ @media(max-width:750px){
+  .curve{
+    clip-path: polygon(0 0, 100% 0, 100% 63%, 0 87%);
+  }
+}
+ @media(max-width:600px){
+  .curve{
+    clip-path: polygon(0 0, 100% 0, 100% 69%, 0 87%);
+  }
+}
+
+/* Section faq */
+
+@keyframes faq-dropdown-down {
+  from{height: 0px;
+    opacity: 0;
+ }to{
+   height: 100%;
+   opacity: 1;
+ }
+}
+.faq{
+  &__title{
+    text-align: center;
+    font-family: 'Roboto-Black', Arial, Helvetica;
+    text-transform: uppercase;
+    font-size: 36px;
+  }
+  &__dropdown{
+    margin-top: 150px;
+    margin-left: 200px;
+  }
+  &__dropbtn-wrapper{
+    display: flex;
+    align-items: center;
+  }
+  &__dropbtn-img{
+    transition: 1s;
+  }
+  &__dropbtn{
+    border: none;
+    background-color: transparent;
+    font-family: 'Roboto-Bold', Arial, Helvetica;
+    font-size: 20px;
+  }
+  &__dropbtn:hover{
+    cursor: pointer;
+  }
+  &__dropdown-content{
+    //display: none;
+    height: 0px;
+    opacity: 0;
+    overflow: hidden;
+     font-family: 'Roboto-Light', Arial, Helvetica;
+    font-size: 19px;
+    max-width: 400px;
+    padding:10px 0px 10px 40px;
+  }
+}
+@media(max-width:1125px){
+.faq{
+    &__dropdown{
+      margin-left: 100px;
+    }
+  }
+}
+@media(max-width:900px){
+.faq{
+    &__dropdown{
+      margin-left: 20px;
+    }
+    &__dropbtn{
+        font-size: 16px;
+    }
+  }
+}
+.faq-show {
+  //display:block;
+  animation: faq-dropdown-down;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  }
+.faq-rotate{
+  transform: rotate(90deg);
+  transition: 1s;
 }

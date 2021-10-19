@@ -85,3 +85,44 @@ rev.slick({
   },
   /*infinite: false,*/
 });
+
+
+/* faq dropdown content */
+
+function showFirst() {
+  document.getElementById("dropdown-1").classList.toggle("faq-show");
+  document.getElementById("faq-img-1").classList.toggle("faq-rotate");
+}
+function showSecond() {
+  document.getElementById("dropdown-2").classList.toggle("faq-show");
+  document.getElementById("faq-img-2").classList.toggle("faq-rotate");
+}
+function showThird() {
+  document.getElementById("dropdown-3").classList.toggle("faq-show");
+  document.getElementById("faq-img-3").classList.toggle("faq-rotate");
+}
+
+window.onclick = function (event) {
+  if (!event.target.matches('.faq__dropbtn')) {
+    var dropdowns = document.getElementsByClassName("faq__dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('faq-show')) {
+        openDropdown.classList.remove('faq-show');
+      }
+
+    }
+  }
+  if (!event.target.matches('.faq__dropbtn')) {
+    var leftArrow = document.getElementsByClassName("faq__dropbtn-img");
+    var i;
+    for (i = 0; i < leftArrow.length; i++) {
+      var bottomArrow = leftArrow[i];
+      if (bottomArrow.classList.contains('faq-rotate')) {
+        bottomArrow.classList.remove('faq-rotate');
+      }
+
+    }
+  }
+}
