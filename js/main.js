@@ -37,6 +37,8 @@
 //   });
 // });
 
+
+
 var rev = $('.rev_slider');
 rev.on('init', function (event, slick, currentSlide) {
   var
@@ -71,8 +73,8 @@ rev.slick({
   arrows: true,
   dots: false,
   focusOnSelect: true,
-  prevArrow: '<button class="prev-slick"></button>',
-  nextArrow: '<button class="next-slick"></button>',
+  prevArrow: '<button class="prev-slick signals-btn"></button>',
+  nextArrow: '<button class="next-slick signals-btn"></button>',
   infinite: true,
   centerMode: true,
   slidesPerRow: 1,
@@ -125,4 +127,63 @@ window.onclick = function (event) {
 
     }
   }
-}
+};
+
+
+$(window).resize(function () {
+  if ($(window).width() < 1200) {
+    $('.reviews__wrapper').addClass('reviews-slider');
+  }
+});
+$(window).resize(function () {
+  if ($(window).width() > 1200) {
+    $('.reviews__wrapper').removeClass('reviews-slider');
+  }
+});
+
+// $(document).ready(function () {
+//   $('.reviews__slider').slick({
+//     dots: true,
+//     infinite: true,
+//     centerMode: true,
+//     speed: 300,
+//     nextArrow: '<button type="button" class="slick-next">Dalee</button>',
+//     prevArrow: '<button type="button" class="slick-prev">Preved</button>',
+//     slidesToShow: 2,
+//     slidesToScroll: 1
+//   });
+// });
+
+
+
+
+$(document).ready(function () {
+  function slickify() {
+    $('.reviews__slider-wrapper').slick({
+      dots: false,
+      infinite: true,
+      centerMode: true,
+      mobileFirst: true,
+      centerPadding: '0px',
+      speed: 300,
+      nextArrow: '<button type="button" class="reviews-slick-nextbtn reviews-btn"></button>',
+      prevArrow: '<button type="button" class="reviews-slick-prevbtn reviews-btn"></button>',
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1200,
+          settings: "unslick"
+        }
+
+      ]
+    });
+  }
+  slickify();
+  $(window).resize(function () {
+    var $windowWidth = $(window).width();
+    if ($windowWidth < 1200) {
+      slickify();
+    }
+  });
+});
