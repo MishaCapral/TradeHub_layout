@@ -38,6 +38,15 @@
 // });
 
 
+// burger-menu
+$('.burger__menu-btn').on('click', function (e) {
+  e.preventDefault();
+  $('.burger__menu').toggleClass('burger__menu-active');
+  $('.burger__content').toggleClass('burger__content-active');
+})
+
+
+
 
 var rev = $('.rev_slider');
 rev.on('init', function (event, slick, currentSlide) {
@@ -159,7 +168,7 @@ $(window).resize(function () {
 
 $(document).ready(function () {
   function slickify() {
-    $('.reviews__slider-wrapper').slick({
+    $('.reviews__slider-wrapper').not('.slick-initialized').slick({
       dots: false,
       infinite: true,
       centerMode: true,
@@ -187,3 +196,5 @@ $(document).ready(function () {
     }
   });
 });
+
+
