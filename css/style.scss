@@ -66,7 +66,8 @@ textarea, input{
 .hero{
   min-height: 940px;
   //background-color: #000;
-  background:linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.9) ), url("/images/texture-hero.png");
+  background:linear-gradient( rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.9) ), url("/images/texture-hero.png");
+  box-shadow: 0px -85px 75px 5px rgba(0, 0, 0, 0.9) inset;
   background-repeat: no-repeat;
   background-size: cover;
 	background-position: 50% top ;
@@ -121,22 +122,28 @@ textarea, input{
     }
 }
 
-/* Section about-us*/
-
+/* ____ Section about-us ____ */
 
 .about-us{
   position:relative;
   background-color: #020202;
+  box-shadow: 0px 8px 32px 28px rgba(0, 0, 0, 1);
+  &__wrapper-0{
+    background-image: url("/images/texture-aboutUs-package.png");
+    box-shadow: 2px 34px 78px 57px rgba(0, 0, 0, 0.9) inset;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    position: relative;
+  }
   &__wrapper-1{
     margin: 0 auto;
     max-width: 1950px;
     min-height: 1325px;
-    background-color: #020202;
+    background-color: rgba(0, 0, 0, 0.2);
     color:#b7b7b7;
     padding-top: 80px;
-    background-image: url("/images/texture-aboutUs-package.png");
-    background-repeat: no-repeat;
-    background-position:center 40% ;
   }
   &__wrapper-2{
     min-height: 100px;
@@ -145,7 +152,6 @@ textarea, input{
     background-color: #fff;
   }
 } 
-
 .column{
   display: flex;
   justify-content: center;
@@ -171,7 +177,23 @@ textarea, input{
     &__right{
       padding-left: 12px;
     }
-  }  
+  }
+}
+/* mobile */
+@media(max-width:768px){
+  .column{
+    flex-direction: column;
+    &__mobile{
+      width: auto;
+      text-align: right;
+      border-right: 2px solid #fff;
+      border-left: none;
+      padding-right: 25px;
+      padding-left: 0px;
+      margin: 0px 30px;
+      min-height: auto;
+    }
+  }
 }
 .hidden{
   visibility: hidden;
@@ -219,20 +241,25 @@ textarea, input{
   }
   }
 }
-@media(max-width:650px){
+/* mobile */
+@media(max-width:768px){
+  .hidden{
+    display: none;
+  }
   .item{
     &__description{
-      font-size: 28px;
-      letter-spacing: 3px;
+      font-size: 24px;
+      letter-spacing: 1px;
+      font-family: 'Roboto-Black', Arial, Helvetica;
     }
     &__sub-description{
-        font-size: 12px;
-      }
+        font-size: 15px;
+    }
     &__content{
-      font-size: 12px;
-      }
+      font-size: 18px;
+    }
     &__number{
-      font-size: 40px;
+      font-size: 35px;
     }
     }
 }
@@ -245,7 +272,7 @@ textarea, input{
     margin-top: 55px;  
     margin-bottom: 90px;
     max-width: 517px;
-        } 
+  } 
   &__3{
     float: right; 
     margin-bottom: 90px;
@@ -266,12 +293,34 @@ textarea, input{
     float: left;
     margin-top: 110px;
     max-width: 553px;
-    
   }
  }
- 
-  
-/* points at line*/
+/* mobile */
+ @media(max-width:768px){
+  .item{
+    &__1{
+      margin-top: -20px; 
+      margin-bottom: 25px;
+    } 
+    &__3{
+      margin-bottom: 25px;
+    }
+    &__5{
+      padding-top: 0px ;
+    }
+    &__2{
+      float: right;
+      margin-top: 25px;
+    }
+    &__4{
+      padding-top: 0px;
+      float: right;
+      margin-top: 25px;
+      margin-bottom: 200px;
+    }
+  }
+ }
+/* points at line (left column)*/
 .item__1, .item__3, .item__5{
   margin-left: 15px;
   position: relative;
@@ -285,7 +334,6 @@ textarea, input{
     background-color: #000;
     border: 5px solid #fff;
     border-radius: 50%;
-    // z-index: 0;
     transition: 1s;
 }
 /* hover */
@@ -310,21 +358,15 @@ textarea, input{
   }
 }
 }
-@media(max-width:650px){
-  .item__1, .item__3, .item__5{
+/* mobile*/
+@media(max-width:768px){
+  .item__1,.item__3, .item__5{
     .item__description::before{
-      height: 20px;
-      width: 20px;
-      right: -24px;
-      top: 17px;      
-  }
-  .item__description:hover::before{
-    right: -28px;
-    height: 28px;
-    width: 28px;
+      right: -38px;
   }
 }
 }
+/* points at line (right column)*/
 .item__2, .item__4{
   position: relative;
   margin-right: 15px;
@@ -338,7 +380,6 @@ textarea, input{
     background-color: #000;
     border: 5px solid #fff;
     border-radius: 50%;
-    // z-index: 1;
     transition: 1s;
 }
 /* hover */
@@ -363,18 +404,13 @@ textarea, input{
  }
 }
 }
-@media(max-width:650px){
+/* mobile */
+@media(max-width:768px){
   .item__2, .item__4{
+    margin-right: 0px;
     .item__description::before{
-      height: 20px;
-      width: 20px;
-      left: -24px;
-      top: 17px;      
-  }
-  .item__description:hover::before{
-    left: -28px;
-    height: 28px;
-    width: 28px;
+      right: -38px;
+      left: unset;     
   }
 }
 }
@@ -386,21 +422,36 @@ textarea, input{
 }
 .bottom-texture{
   width: 100%;
-  min-height: 900px;
-  background-image: url("/images/texture-aboutUs-bottom.png");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position:bottom ;
+  max-height: 50%;
   z-index: 3;
   position: absolute;
-  bottom: 0px;
+  bottom: -14%;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+}
+@media(max-width:1040px){
+  .bottom-texture{
+    bottom: -11%;
+  }
+}
+@media(max-width:768px){
+  .bottom-texture{
+    bottom: -8%;
+  }
+}
+@media(max-width:510px){
+  .bottom-texture{
+    bottom: -5%;
+  }
 }
 
-/* Section packs */
+/* ____ Section packs ____ */
 .packs{
+  margin-top: 150px;
   min-height: 900px;
 }
-
 .packs-slider{
   &__item{
     max-width: 460px;
@@ -459,9 +510,9 @@ textarea, input{
 }
 
 
-/* Section signals*/
+/* ____ Section signals ____ */
 
-/* slick-slider take in  https://ru.stackoverflow.com/questions/760379/3d-%D0%BA%D0%B0%D1%80%D1%83%D1%81%D0%B5%D0%BB%D1%8C-%D0%BD%D0%B0-slick-sliderr */
+/* slick-slider take on https://ru.stackoverflow.com/questions/760379/3d-%D0%BA%D0%B0%D1%80%D1%83%D1%81%D0%B5%D0%BB%D1%8C-%D0%BD%D0%B0-slick-sliderr */
 .signal-slider{
   position: relative
 }
@@ -549,8 +600,7 @@ textarea, input{
   max-width: 100%;
   max-height: 390px;
 }
-
-/*arrow signals slider */
+/* arrow signals slider */
 .signals-btn{
   position: absolute;
   top: 30%;
@@ -561,11 +611,6 @@ textarea, input{
   transition: 0.5s;
   background: url("/images/arrow-slider-signals.png") 50% 50% no-repeat;
 }
-// .signals-btn:hover{
-//   width: 90px;
-//   height: 90px;
-//   transition: 0.5s;
-// }
 .signal-slider .prev-slick{
   left: 20px;
   z-index: 2;
@@ -574,7 +619,8 @@ textarea, input{
   right: 20px;
   transform: rotate(-180deg);
   }
-@media(max-width:830px){
+  /* mobile */
+@media(max-width:768px){
   .signals-btn{
   background: url("/images/arrow-slider-signals-mob.png") 48% 48% no-repeat;
   background-color: #ff9900;
@@ -615,7 +661,7 @@ textarea, input{
   flex-wrap: wrap;
   margin: 0 auto;
   &__inner{
-    margin: 135px 100px 60px 100px;
+    margin: 135px 105px 60px 105px;
     position: relative;
   }
   &__link{
@@ -623,7 +669,7 @@ textarea, input{
     flex-direction: column;
     align-items: center;
   }
-    &__ringle{
+  &__ringle{
     width: 175px;
     height: 175px;
     border: 6px solid #ff9900;
@@ -650,21 +696,20 @@ textarea, input{
     min-width: auto;
 }
 }
+/* 769px flex make 1 item in screen*/
 @media(max-width:1125px){
   .signal-item{
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
 }
 
-/* light-part-wrapper */
-
+/* ____ light-part-wrapper ____ */
 .light-part-wrapper{
   min-height: 2500px;
   position: relative;
   background-image: url("/images/texture-light-part.jpg");
 }
-
-/* Section curve-line */
+/* ____ Section curve-line ____ */
 
 .curve-line{
   &__wrapper{
@@ -694,7 +739,7 @@ textarea, input{
     }
   }
 }
-@media(max-width:750px){
+@media(max-width:768px){
 .curve-line{
   &__img-1{
     width: 40px;
@@ -708,7 +753,6 @@ textarea, input{
   }
 }
 }
-
 .curve{
   /* curve -> https://bennettfeely.com/clippy/ */
   min-height: 300px;
@@ -732,7 +776,7 @@ textarea, input{
   }
 }
 
-/* Section faq */
+/* ____ Section faq ____ */
 
 @keyframes faq-dropdown-down {
   from{height: 0px;
@@ -771,7 +815,6 @@ textarea, input{
     cursor: pointer;
   }
   &__dropdown-content{
-    //display: none;
     height: 0px;
     opacity: 0;
     overflow: hidden;
@@ -800,7 +843,6 @@ textarea, input{
   }
 }
 .faq-show {
-  //display:block;
   animation: faq-dropdown-down;
   animation-duration: 1s;
   animation-fill-mode: forwards;
@@ -810,8 +852,8 @@ textarea, input{
   transition: 1s;
 }
 
-/* Section reviews */
-/* for mobile version*/
+/* ____ Section reviews ____ */
+/* mobile */
 .reviews{
   position: relative;
   &__title{
@@ -899,8 +941,6 @@ textarea, input{
 .reviews-slick-prevbtn{
   left: 30%;
 }
-
-
 
 /* for desktop */
 @media (min-width: 1200px) { 
@@ -1035,10 +1075,8 @@ textarea, input{
   .reviews__slider-wrapper{
     display: block;
   }
-  // .reviews__one, .reviews__two, .reviews__three{
-  //   overflow: hidden;
-  // };
  }
+
 @media (max-width: 500px) { 
   .reviews__one, .reviews__two, .reviews__three{
     overflow: hidden;
@@ -1049,7 +1087,7 @@ textarea, input{
   };
  }
 
-/* Section connection */
+/* ____ Section connection ____ */
 
 .connection{
   &__wrapper{
@@ -1073,11 +1111,11 @@ textarea, input{
     text-align: center;
   }
   &__form > input{
-  margin-bottom: 30px;
-  text-align: center;
-  padding: 20px 0px;
-  background-color: transparent;
-  border: 1px solid #999999;
+    margin-bottom: 30px;
+    text-align: center;
+    padding: 20px 0px;
+    background-color: transparent;
+    border: 1px solid #999999;
   }
   &__textarea{
     margin-bottom: 30px;
@@ -1116,7 +1154,7 @@ textarea, input{
 }
 }
 
-/* section social */
+/* ____ Section social ____ */
 
 .social{
   display: flex;
@@ -1134,7 +1172,6 @@ textarea, input{
     }
   }
 }
-
 
 /*--------------*/
 
