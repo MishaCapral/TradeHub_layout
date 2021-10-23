@@ -44,7 +44,10 @@ $('.burger__menu-btn').on('click', function (e) {
   $('.burger__menu').toggleClass('burger__menu-active');
   $('.burger__content').toggleClass('burger__content-active');
 })
-
+//burger-button
+function burgerButton(x) {
+  x.classList.toggle("change");
+}
 
 
 

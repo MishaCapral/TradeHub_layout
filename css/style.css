@@ -245,14 +245,6 @@ textarea, input {
             align-items: center;
     height: 50%;
   }
-  .burger__menu-btn {
-    width: 30px;
-    height: 30px;
-    background-color: yellowgreen;
-    position: absolute;
-    right: -35px;
-    top: 10px;
-  }
   .burger__content {
     -webkit-transition: 0.5s;
     transition: 0.5s;
@@ -262,6 +254,34 @@ textarea, input {
   .burger__content-active {
     -webkit-transform: translateX(50%);
             transform: translateX(50%);
+  }
+  /**/
+  .burger__menu-btn {
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    right: -45px;
+    top: 10px;
+  }
+  .bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #ff9900;
+    margin: 6px 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+  }
+  .change .bar2 {
+    opacity: 0;
+  }
+  .change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
   }
 }
 
@@ -532,6 +552,15 @@ textarea, input {
   .item__1 .item__description::before, .item__3 .item__description::before, .item__5 .item__description::before {
     right: -38px;
   }
+  .item__1 .item__description:hover, .item__3 .item__description:hover, .item__5 .item__description:hover {
+    letter-spacing: 1px;
+  }
+  .item__1 .item__description:hover::before, .item__3 .item__description:hover::before, .item__5 .item__description:hover::before {
+    right: -38px;
+    top: 20px;
+    height: 25px;
+    width: 25px;
+  }
 }
 
 /* points at line (right column)*/
@@ -584,6 +613,16 @@ textarea, input {
   .item__2 .item__description::before, .item__4 .item__description::before {
     right: -38px;
     left: unset;
+  }
+  .item__2 .item__description:hover, .item__4 .item__description:hover {
+    letter-spacing: 1px;
+  }
+  .item__2 .item__description:hover::before, .item__4 .item__description:hover::before {
+    right: -38px;
+    left: unset;
+    top: 20px;
+    height: 25px;
+    width: 25px;
   }
 }
 
@@ -808,8 +847,8 @@ textarea, input {
   position: absolute;
   top: 30%;
   background-size: contain;
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   border: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
@@ -1243,7 +1282,7 @@ textarea, input {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    height: 1140px;
+    height: 990px;
   }
   .reviews {
     overflow: hidden;
@@ -1314,6 +1353,9 @@ textarea, input {
   .reviews {
     /*general styles desktop*/
     /*individual styles desktop*/
+  }
+  .reviews__title {
+    top: 60px;
   }
   .reviews__img {
     max-width: unset;
