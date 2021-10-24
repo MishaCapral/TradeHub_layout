@@ -755,9 +755,22 @@ textarea, input {
   opacity: 0.9;
 }
 
+/*orange vertical line*/
+.vertical-line::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 150px;
+  left: 21px;
+  height: 110px;
+  width: 10px;
+  background-color: #ff9900;
+  opacity: 0.6;
+  border-radius: 5px;
+}
+
 @media (max-width: 768px) {
   .packs-slider__content {
-    padding: 30px 45px 0px 30px;
     max-height: 380px;
     overflow-y: hidden;
   }

@@ -1,4 +1,6 @@
-// $(document).ready(function () {
+// slick slider for pack slider
+//
+//$(document).ready(function () {
 //   $('.packs-slider').slick({
 //     dots: false,
 //     infinite: true,
@@ -39,21 +41,19 @@
 //   });
 // });
 
-
-
 // burger-menu
 $('.burger__menu-btn').on('click', function (e) {
   e.preventDefault();
   $('.burger__menu').toggleClass('burger__menu-active');
   $('.burger__content').toggleClass('burger__content-active');
 })
+
 //burger-button
 function burgerButton(x) {
   x.classList.toggle("change");
 }
 
-
-
+//signal-slider
 var rev = $('.rev_slider');
 rev.on('init', function (event, slick, currentSlide) {
   var
@@ -82,7 +82,7 @@ rev.on('init', function (event, slick, currentSlide) {
   slick.$next = next;
   cur.removeClass('slick-next').removeClass('slick-sprev');
 });
-
+//signal-slider -> settings in slick-slider
 rev.slick({
   speed: 1000,
   arrows: true,
@@ -100,12 +100,10 @@ rev.slick({
   customPaging: function (slider, i) {
     return '';
   },
-  /*infinite: false,*/
 });
 
 
-/* faq dropdown content */
-
+//faq dropdown content
 function showFirst() {
   document.getElementById("dropdown-1").classList.toggle("faq-show");
   document.getElementById("faq-img-1").classList.toggle("faq-rotate");
@@ -144,7 +142,7 @@ window.onclick = function (event) {
   }
 };
 
-
+// reviews slider -> activate slider width resize
 $(window).resize(function () {
   if ($(window).width() < 1200) {
     $('.reviews__wrapper').addClass('reviews-slider');
@@ -156,22 +154,7 @@ $(window).resize(function () {
   }
 });
 
-// $(document).ready(function () {
-//   $('.reviews__slider').slick({
-//     dots: true,
-//     infinite: true,
-//     centerMode: true,
-//     speed: 300,
-//     nextArrow: '<button type="button" class="slick-next">Dalee</button>',
-//     prevArrow: '<button type="button" class="slick-prev">Preved</button>',
-//     slidesToShow: 2,
-//     slidesToScroll: 1
-//   });
-// });
-
-
-
-
+// slick slider for reviews
 $(document).ready(function () {
   function slickify() {
     $('.reviews__slider-wrapper').not('.slick-initialized').slick({
