@@ -1,21 +1,23 @@
 // $(document).ready(function () {
 //   $('.packs-slider').slick({
-//     dots: true,
+//     dots: false,
 //     infinite: true,
 //     centerMode: true,
+
+//     arrows: true,
 //     speed: 300,
 //     nextArrow: '<button type="button" class="slick-next">Dalee</button>',
 //     prevArrow: '<button type="button" class="slick-prev">Preved</button>',
-//     slidesToShow: 2,
+//     slidesToShow: 3,
 //     slidesToScroll: 1,
 //     responsive: [
 //       {
-//         breakpoint: 1024,
+//         breakpoint: 1850,
 //         settings: {
 //           slidesToShow: 2,
 //           slidesToScroll: 2,
 //           infinite: true,
-//           dots: true
+//           dots: false
 //         }
 //       },
 //       {
@@ -36,6 +38,7 @@
 //     ]
 //   });
 // });
+
 
 
 // burger-menu
