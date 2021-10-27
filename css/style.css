@@ -1,4 +1,4 @@
-@import url("/css/fonts.css");
+@import url("fonts.css");
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -83,7 +83,7 @@ textarea, input {
     position: unset;
   }
   .navigate__link {
-    background-image: url("/images/texture-burger-link.png");
+    background-image: url("../images/texture-burger-link.png");
     background-size: cover;
     background-repeat: no-repeat;
     font-size: 25px;
@@ -114,8 +114,8 @@ textarea, input {
 
 .hero {
   min-height: 100vh;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.9))), url("/images/texture-hero.png");
-  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url("/images/texture-hero.png");
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.9))), url("../images/texture-hero.png");
+  background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9)), url("../images/texture-hero.png");
   -webkit-box-shadow: 0px -85px 75px 5px rgba(0, 0, 0, 0.9) inset;
           box-shadow: 0px -85px 75px 5px rgba(0, 0, 0, 0.9) inset;
   background-size: cover;
@@ -218,7 +218,7 @@ textarea, input {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    background-image: url("/images/texture-burger-menu.png");
+    background-image: url("../images/texture-burger-menu.png");
     background-size: cover;
     -webkit-transition: 0.5s;
     transition: 0.5s;
@@ -294,7 +294,7 @@ textarea, input {
 }
 
 .about-us__wrapper-0 {
-  background-image: url("/images/texture-aboutUs-package.png");
+  background-image: url("../images/texture-aboutUs-package.png");
   -webkit-box-shadow: 2px 34px 78px 57px rgba(0, 0, 0, 0.9) inset;
           box-shadow: 2px 34px 78px 57px rgba(0, 0, 0, 0.9) inset;
   background-repeat: no-repeat;
@@ -667,7 +667,7 @@ textarea, input {
   min-height: 900px;
   position: relative;
   z-index: 2;
-  background-image: url("/images/texture-packs-mobile.png");
+  background-image: url("../images/texture-packs-mobile.png");
   background-size: contain;
 }
 
@@ -700,7 +700,7 @@ textarea, input {
   margin-top: 55px;
   max-width: 460px;
   min-height: 717px;
-  background-image: url("/images/texture-packs-slider1.png");
+  background-image: url("../images/texture-packs-slider1.png");
   background-size: 100% 100%;
   background-repeat: no-repeat;
   position: relative;
@@ -709,7 +709,7 @@ textarea, input {
 }
 
 .packs-slider__item-inner {
-  background-image: url("/images/texture-packs-slider2.png");
+  background-image: url("../images/texture-packs-slider2.png");
   background-size: cover;
   background-repeat: no-repeat;
   min-height: 717px;
@@ -720,7 +720,7 @@ textarea, input {
 }
 
 .packs-slider__title {
-  background: url("/images/texture-packs-slider3.png");
+  background: url("../images/texture-packs-slider3.png");
   background-size: cover;
   background-clip: text;
   -webkit-background-clip: text;
@@ -902,7 +902,7 @@ textarea, input {
   border: none;
   -webkit-transition: 0.5s;
   transition: 0.5s;
-  background: url("/images/arrow-slider-signals.png") 50% 50% no-repeat;
+  background: url("../images/arrow-slider-signals.png") 50% 50% no-repeat;
 }
 
 .signal-slider .prev-slick {
@@ -919,7 +919,7 @@ textarea, input {
 /* mobile */
 @media (max-width: 768px) {
   .signals-btn {
-    background: url("/images/arrow-slider-signals-mob.png") 48% 48% no-repeat;
+    background: url("../images/arrow-slider-signals-mob.png") 48% 48% no-repeat;
     background-color: #ff9900;
     border-radius: 50%;
     -webkit-box-shadow: 0px 0px 30px #c57600, inset 0px 0px 15px #361303;
@@ -1038,7 +1038,7 @@ textarea, input {
 .light-part-wrapper {
   min-height: 2500px;
   position: relative;
-  background-image: url("/images/texture-light-part.jpg");
+  background-image: url("../images/texture-light-part.jpg");
 }
 
 /* ____ Section curve-line ____ */
@@ -1268,7 +1268,7 @@ textarea, input {
 }
 
 .reviews__one__content {
-  background-image: url("/images/texture-reviews1.png");
+  background-image: url("../images/texture-reviews1.png");
   -webkit-transform: rotate(5deg);
           transform: rotate(5deg);
   padding: 205px 80px;
@@ -1282,7 +1282,7 @@ textarea, input {
 }
 
 .reviews__two__content {
-  background-image: url("/images/texture-reviews2.png");
+  background-image: url("../images/texture-reviews2.png");
   -webkit-transform: rotate(-3deg);
           transform: rotate(-3deg);
   padding: 195px 110px 0px 40px;
@@ -1296,7 +1296,7 @@ textarea, input {
 }
 
 .reviews__three__content {
-  background-image: url("/images/texture-reviews3.png");
+  background-image: url("../images/texture-reviews3.png");
   -webkit-transform: rotate(6deg);
           transform: rotate(6deg);
   padding: 230px 130px 0px 50px;
@@ -1306,7 +1306,7 @@ textarea, input {
 .reviews-btn {
   position: absolute;
   top: -50px;
-  background-image: url("/images/arrow-slider-reviews.png");
+  background-image: url("../images/arrow-slider-reviews.png");
   border: none;
   width: 55px;
   height: 38px;
