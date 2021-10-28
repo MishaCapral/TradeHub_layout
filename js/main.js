@@ -41,6 +41,42 @@
 //   });
 // });
 
+const animItems = document.querySelectorAll('._anim-items');
+
+if (animItems.length > 0) {
+  window.addEventListener('scroll', animOnScroll);
+  function animOnScroll() {
+    for (let index = 0; index < animItems.length; index++) {
+      const animItem = animItems[index];
+      const animItemHeight = animItem.offsetHeight;
+      const animItemOffset = offset(animItem).top;
+      const animStart = 6;
+
+      let animItemPoint = window.innerHeight - animItemHeight / animStart;
+      if (animItemHeight > window.innerHeight) {
+        animItemPoint = window.innerHeight - window.innerHeight / animStart;
+      }
+      if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
+        animItem.classList.add('_activeItem');
+      } else {
+        // animItem.classList.remove('_activeItem');
+      }
+    }
+  }
+  function offset(el) {
+    const rect = el.getBoundingClientRect(),
+      scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    return { top: rect.top + scrollTop }
+  }
+}
+
+
+
+
+
+
+
+
 // burger-menu
 $('.burger__menu-btn').on('click', function (e) {
   e.preventDefault();

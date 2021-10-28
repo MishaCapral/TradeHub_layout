@@ -481,6 +481,20 @@ textarea, input {
   max-width: 553px;
 }
 
+._anim-items {
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  opacity: 0;
+  -webkit-transition: all 0.8s ease;
+  transition: all 0.8s ease;
+}
+
+._activeItem {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  opacity: 1;
+}
+
 /* mobile */
 @media (max-width: 768px) {
   .item__1 {

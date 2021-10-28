@@ -376,6 +376,8 @@ textarea, input{
     margin-top: 55px;  
     margin-bottom: 90px;
     max-width: 517px;
+
+   
   } 
   &__3{
     float: right; 
@@ -399,6 +401,15 @@ textarea, input{
     max-width: 553px;
   }
  }
+ ._anim-items{
+  transform: translateY(100%);
+  opacity: 0;
+  transition: all 0.8s ease;
+ }
+._activeItem{
+  transform: translateY(0%);
+   opacity: 1;
+}
 /* mobile */
  @media(max-width:768px){
   .item{
