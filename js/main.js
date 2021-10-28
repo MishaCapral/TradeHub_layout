@@ -52,55 +52,142 @@ $('.burger__menu-btn').on('click', function (e) {
 function burgerButton(x) {
   x.classList.toggle("change");
 }
+/*--------------*/
 
-//signal-slider
-var rev = $('.rev_slider');
-rev.on('init', function (event, slick, currentSlide) {
-  var
-    cur = $(slick.$slides[slick.currentSlide]),
-    next = cur.next(),
-    prev = cur.prev();
-  prev.addClass('slick-sprev');
-  next.addClass('slick-snext');
-  cur.removeClass('slick-snext').removeClass('slick-sprev');
-  slick.$prev = prev;
-  slick.$next = next;
-}).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-  console.log('beforeChange');
-  var
-    cur = $(slick.$slides[nextSlide]);
-  console.log(slick.$prev, slick.$next);
-  slick.$prev.removeClass('slick-sprev');
-  slick.$next.removeClass('slick-snext');
-  next = cur.next(),
-    prev = cur.prev();
-  prev.prev();
-  prev.next();
-  prev.addClass('slick-sprev');
-  next.addClass('slick-snext');
-  slick.$prev = prev;
-  slick.$next = next;
-  cur.removeClass('slick-next').removeClass('slick-sprev');
+jQuery(document).ready(function ($) {
+  {
+    var rev = $('.binance_slider');
+    rev.on('init', function (event, slick, currentSlide) {
+      var
+        cur = $(slick.$slides[slick.currentSlide]),
+        next = cur.next(),
+        prev = cur.prev();
+      prev.addClass('slick-sprev');
+      next.addClass('slick-snext');
+      cur.removeClass('slick-snext').removeClass('slick-sprev');
+      slick.$prev = prev;
+      slick.$next = next;
+    }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+      // console.log('beforeChange');
+      var
+        cur = $(slick.$slides[nextSlide]);
+      console.log(slick.$prev);
+
+      slick.$prev.removeClass('slick-sprev');
+      slick.$next.removeClass('slick-snext');
+      next = cur.next(),
+        prev = cur.prev();
+      prev.prev();
+      prev.next();
+
+      prev.addClass('slick-sprev');
+      next.addClass('slick-snext');
+      slick.$prev = prev;
+      slick.$next = next;
+      cur.removeClass('slick-next').removeClass('slick-sprev');
+    });
+
+    let slider = rev.slick({
+      speed: 500,
+      arrows: false,
+      dots: false,
+      focusOnSelect: true,
+      infinite: true,
+      centerMode: true,
+      slidesPerRow: 1,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      centerPadding: '0',
+      swipe: true,
+      lazyLoad: 'progressive',
+      customPaging: function (slider, i) {
+        return '';
+      },
+      responsive: [
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          }
+        },
+      ]
+      /*infinite: false,*/
+    });
+    $('.binance-button.prev').click(function () {
+      slider.slick('slickPrev')
+    })
+    $('.binance-button.next').click(function () {
+      slider.slick('slickNext')
+    })
+
+  }
 });
-//signal-slider -> settings in slick-slider
-rev.slick({
-  speed: 1000,
-  arrows: true,
-  dots: false,
-  focusOnSelect: true,
-  prevArrow: '<button class="prev-slick signals-btn"></button>',
-  nextArrow: '<button class="next-slick signals-btn"></button>',
-  infinite: true,
-  centerMode: true,
-  slidesPerRow: 1,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  centerPadding: '0',
-  swipe: true,
-  customPaging: function (slider, i) {
-    return '';
-  },
-});
+
+
+/*-----------------*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+// //signal-slider
+// var rev = $('.rev_slider');
+// rev.on('init', function (event, slick, currentSlide) {
+//   var
+//     cur = $(slick.$slides[slick.currentSlide]),
+//     next = cur.next(),
+//     prev = cur.prev();
+//   prev.addClass('slick-sprev');
+//   next.addClass('slick-snext');
+//   cur.removeClass('slick-snext').removeClass('slick-sprev');
+//   slick.$prev = prev;
+//   slick.$next = next;
+// }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+//   //console.log('beforeChange');
+//   var
+//     cur = $(slick.$slides[nextSlide]);
+//   console.log(slick.$prev);
+//   slick.$prev.removeClass('slick-sprev');
+//   slick.$next.removeClass('slick-snext');
+//   next = cur.next(),
+//     prev = cur.prev();
+//   prev.prev();
+//   prev.next();
+//   prev.addClass('slick-sprev');
+//   next.addClass('slick-snext');
+//   slick.$prev = prev;
+//   slick.$next = next;
+//   cur.removeClass('slick-next').removeClass('slick-sprev');
+// });
+// //signal-slider -> settings in slick-slider
+// let slider = rev.slick({
+//   speed: 500,
+//   arrows: true,
+//   dots: false,
+//   focusOnSelect: true,
+//   prevArrow: '<button class="prev-slick signals-btn"></button>',
+//   nextArrow: '<button class="next-slick signals-btn"></button>',
+//   infinite: true,
+//   centerMode: true,
+//   slidesPerRow: 1,
+//   slidesToShow: 1,/**/
+//   slidesToScroll: 1,
+//   centerPadding: '0',
+//   swipe: true,
+//   lazyLoad: 'progressive',
+//   customPaging: function (slider, i) {
+//     return '';
+//   },
+// });
 
 
 //faq dropdown content
