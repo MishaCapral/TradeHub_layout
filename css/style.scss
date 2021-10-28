@@ -905,15 +905,6 @@ textarea, input{
 }
 
 /* ____ Section faq ____ */
-
-@keyframes faq-dropdown-down {
-  from{height: 0px;
-    opacity: 0;
- }to{
-   height: 100%;
-   opacity: 1;
- }
-}
 .faq{
   &__title{
     text-align: center;
@@ -928,7 +919,7 @@ textarea, input{
   &__dropbtn-wrapper{
     display: flex;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 45px;
   }
   &__dropbtn-img{
     transition: 1s;
@@ -944,12 +935,12 @@ textarea, input{
   }
   &__dropdown-content{
     height: 0px;
-    opacity: 0;
+    transition: height 0.5s linear;
     overflow: hidden;
-     font-family: 'Roboto-Light', Arial, Helvetica;
+    font-family: 'Roboto-Light', Arial, Helvetica;
     font-size: 19px;
     max-width: 400px;
-    padding:10px 0px 10px 40px;
+    padding:10px 0px 0px 40px;
   }
 }
 @media(max-width:1200px){
@@ -971,9 +962,8 @@ textarea, input{
   }
 }
 .faq-show {
-  animation: faq-dropdown-down;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
+  height: 150px;
+  transition: height 0.5s linear;
   }
 .faq-rotate{
   transform: rotate(90deg);

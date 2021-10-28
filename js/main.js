@@ -52,8 +52,8 @@ $('.burger__menu-btn').on('click', function (e) {
 function burgerButton(x) {
   x.classList.toggle("change");
 }
-/*--------------*/
 
+//signals-slider
 jQuery(document).ready(function ($) {
   {
     var rev = $('.binance_slider');
@@ -125,71 +125,6 @@ jQuery(document).ready(function ($) {
 });
 
 
-/*-----------------*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-// //signal-slider
-// var rev = $('.rev_slider');
-// rev.on('init', function (event, slick, currentSlide) {
-//   var
-//     cur = $(slick.$slides[slick.currentSlide]),
-//     next = cur.next(),
-//     prev = cur.prev();
-//   prev.addClass('slick-sprev');
-//   next.addClass('slick-snext');
-//   cur.removeClass('slick-snext').removeClass('slick-sprev');
-//   slick.$prev = prev;
-//   slick.$next = next;
-// }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-//   //console.log('beforeChange');
-//   var
-//     cur = $(slick.$slides[nextSlide]);
-//   console.log(slick.$prev);
-//   slick.$prev.removeClass('slick-sprev');
-//   slick.$next.removeClass('slick-snext');
-//   next = cur.next(),
-//     prev = cur.prev();
-//   prev.prev();
-//   prev.next();
-//   prev.addClass('slick-sprev');
-//   next.addClass('slick-snext');
-//   slick.$prev = prev;
-//   slick.$next = next;
-//   cur.removeClass('slick-next').removeClass('slick-sprev');
-// });
-// //signal-slider -> settings in slick-slider
-// let slider = rev.slick({
-//   speed: 500,
-//   arrows: true,
-//   dots: false,
-//   focusOnSelect: true,
-//   prevArrow: '<button class="prev-slick signals-btn"></button>',
-//   nextArrow: '<button class="next-slick signals-btn"></button>',
-//   infinite: true,
-//   centerMode: true,
-//   slidesPerRow: 1,
-//   slidesToShow: 1,/**/
-//   slidesToScroll: 1,
-//   centerPadding: '0',
-//   swipe: true,
-//   lazyLoad: 'progressive',
-//   customPaging: function (slider, i) {
-//     return '';
-//   },
-// });
-
-
 //faq dropdown content
 function showFirst() {
   document.getElementById("dropdown-1").classList.toggle("faq-show");
@@ -205,7 +140,7 @@ function showThird() {
 }
 
 window.onclick = function (event) {
-  if (!event.target.matches('.faq__dropbtn')) {
+  if (!event.target.matches('.faq__dropbtn , .faq__dropbtn-img')) {
     var dropdowns = document.getElementsByClassName("faq__dropdown-content");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
@@ -216,7 +151,7 @@ window.onclick = function (event) {
 
     }
   }
-  if (!event.target.matches('.faq__dropbtn')) {
+  if (!event.target.matches('.faq__dropbtn, .faq__dropbtn-img')) {
     var leftArrow = document.getElementsByClassName("faq__dropbtn-img");
     var i;
     for (i = 0; i < leftArrow.length; i++) {

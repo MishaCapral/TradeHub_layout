@@ -1051,27 +1051,6 @@ textarea, input {
 }
 
 /* ____ Section faq ____ */
-@-webkit-keyframes faq-dropdown-down {
-  from {
-    height: 0px;
-    opacity: 0;
-  }
-  to {
-    height: 100%;
-    opacity: 1;
-  }
-}
-@keyframes faq-dropdown-down {
-  from {
-    height: 0px;
-    opacity: 0;
-  }
-  to {
-    height: 100%;
-    opacity: 1;
-  }
-}
-
 .faq__title {
   text-align: center;
   font-family: 'Roboto-Black', Arial, Helvetica;
@@ -1091,7 +1070,7 @@ textarea, input {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 20px;
+  margin-top: 45px;
 }
 
 .faq__dropbtn-img {
@@ -1112,12 +1091,13 @@ textarea, input {
 
 .faq__dropdown-content {
   height: 0px;
-  opacity: 0;
+  -webkit-transition: height 0.5s linear;
+  transition: height 0.5s linear;
   overflow: hidden;
   font-family: 'Roboto-Light', Arial, Helvetica;
   font-size: 19px;
   max-width: 400px;
-  padding: 10px 0px 10px 40px;
+  padding: 10px 0px 0px 40px;
 }
 
 @media (max-width: 1200px) {
@@ -1137,12 +1117,9 @@ textarea, input {
 }
 
 .faq-show {
-  -webkit-animation: faq-dropdown-down;
-          animation: faq-dropdown-down;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  height: 150px;
+  -webkit-transition: height 0.5s linear;
+  transition: height 0.5s linear;
 }
 
 .faq-rotate {
