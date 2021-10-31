@@ -1,46 +1,38 @@
-// slick slider for pack slider
-//
-//$(document).ready(function () {
-//   $('.packs-slider').slick({
-//     dots: false,
-//     infinite: true,
-//     centerMode: true,
+// packs slider
+let mobilePoint = 1100;
+$('.slider-nav').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  arrows: true,
+  nextArrow: '<button type="button" class="packs-slick-nextbtn packs-btn"></button>',
+  prevArrow: '<button type="button" class="packs-slick-prevbtn packs-btn"></button>',
+  responsive: [
+    {
+      breakpoint: 1400,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1
+      }
+    },
+    {
+      breakpoint: mobilePoint,
+      settings: "unslick"
+    }
+  ]
+});
+// drop to bottom center items
+$('.slider-nav').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+  // for 4 items in slider 
+  $('.slick-slide').removeClass('slick-active-bottom4');
+  $('.slick-active').next().addClass('slick-active-bottom4');
+  $('.slick-active').next().next().next().removeClass('slick-active-bottom4');
+  // for 3 items in slider
+  $('.slick-slide').removeClass('slick-active-bottom3');
+  $('.slick-active').eq(1).addClass('slick-active-bottom3');
+}).trigger('afterChange');
 
-//     arrows: true,
-//     speed: 300,
-//     nextArrow: '<button type="button" class="slick-next">Dalee</button>',
-//     prevArrow: '<button type="button" class="slick-prev">Preved</button>',
-//     slidesToShow: 3,
-//     slidesToScroll: 1,
-//     responsive: [
-//       {
-//         breakpoint: 1850,
-//         settings: {
-//           slidesToShow: 2,
-//           slidesToScroll: 2,
-//           infinite: true,
-//           dots: false
-//         }
-//       },
-//       {
-//         breakpoint: 600,
-//         settings: {
-//           slidesToShow: 2,
-//           slidesToScroll: 2
-//         }
-//       },
-//       {
-//         breakpoint: 480,
-//         settings: {
-//           slidesToShow: 1,
-//           slidesToScroll: 1
-//         }
-//       }
 
-//     ]
-//   });
-// });
-
+// slow surfacing items at scrolling in section about-us
 const animItems = document.querySelectorAll('._anim-items');
 
 if (animItems.length > 0) {
@@ -59,6 +51,7 @@ if (animItems.length > 0) {
       if ((pageYOffset > animItemOffset - animItemPoint) && pageYOffset < (animItemOffset + animItemHeight)) {
         animItem.classList.add('_activeItem');
       } else {
+        // slow hidden items
         // animItem.classList.remove('_activeItem');
       }
     }
@@ -69,13 +62,6 @@ if (animItems.length > 0) {
     return { top: rect.top + scrollTop }
   }
 }
-
-
-
-
-
-
-
 
 // burger-menu
 $('.burger__menu-btn').on('click', function (e) {
@@ -90,7 +76,7 @@ function burgerButton(x) {
 }
 
 //signals-slider
-jQuery(document).ready(function ($) {
+$(document).ready(function () {
   {
     var rev = $('.binance_slider');
     rev.on('init', function (event, slick, currentSlide) {
@@ -103,25 +89,26 @@ jQuery(document).ready(function ($) {
       cur.removeClass('slick-snext').removeClass('slick-sprev');
       slick.$prev = prev;
       slick.$next = next;
-    }).on('beforeChange', function (event, slick, currentSlide, nextSlide) {
-      // console.log('beforeChange');
-      var
-        cur = $(slick.$slides[nextSlide]);
-      console.log(slick.$prev);
+    })
+    //.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    //   // console.log('beforeChange');
+    //   var
+    //     cur = $(slick.$slides[nextSlide]);
+    //   console.log(slick.$prev);
 
-      slick.$prev.removeClass('slick-sprev');
-      slick.$next.removeClass('slick-snext');
-      next = cur.next(),
-        prev = cur.prev();
-      prev.prev();
-      prev.next();
+    //   slick.$prev.removeClass('slick-sprev');
+    //   slick.$next.removeClass('slick-snext');
+    //   next = cur.next(),
+    //     prev = cur.prev();
+    //   prev.prev();
+    //   prev.next();
 
-      prev.addClass('slick-sprev');
-      next.addClass('slick-snext');
-      slick.$prev = prev;
-      slick.$next = next;
-      cur.removeClass('slick-next').removeClass('slick-sprev');
-    });
+    //   prev.addClass('slick-sprev');
+    //   next.addClass('slick-snext');
+    //   slick.$prev = prev;
+    //   slick.$next = next;
+    //   cur.removeClass('slick-next').removeClass('slick-sprev');
+    // });
 
     let slider = rev.slick({
       speed: 500,
@@ -136,7 +123,7 @@ jQuery(document).ready(function ($) {
       centerPadding: '0',
       swipe: true,
       lazyLoad: 'progressive',
-      customPaging: function (slider, i) {
+      customPaging: function (slider) {
         return '';
       },
       responsive: [
@@ -148,7 +135,6 @@ jQuery(document).ready(function ($) {
           }
         },
       ]
-      /*infinite: false,*/
     });
     $('.binance-button.prev').click(function () {
       slider.slick('slickPrev')
@@ -159,7 +145,6 @@ jQuery(document).ready(function ($) {
 
   }
 });
-
 
 //faq dropdown content
 function showFirst() {
@@ -243,5 +228,8 @@ $(document).ready(function () {
     }
   });
 });
+
+
+
 
 
