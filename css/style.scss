@@ -123,7 +123,14 @@ textarea, input{
       }
   }
 }
+@keyframes blink {
+  50% {
+    opacity: 0.35;
+  }
+  
+}
 .dot{
+  animation: blink 3s linear 0s infinite;
   position: absolute;
   left: 0; 
   right: 0; 
@@ -1246,14 +1253,25 @@ textarea, input{
 }
 .reviews-slick-prevbtn{
   left: 30%;
+  z-index: 2;
 }
 
 /* for desktop */
-@media (min-width: 1200px) { 
+@media (min-width: 1200px) {
+  .reviews .slick-track{
+    min-height: 750px;
+  }
+  .reviews-btn{
+    position: absolute;
+    top: 150px;
+  }
+  .reviews-slick-nextbtn{
+    right: 35%;
+  }
+  .reviews-slick-prevbtn{
+    left: 35%;
+  } 
  .reviews__slider-wrapper{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     height: 990px;
   }
   .reviews{
@@ -1262,14 +1280,19 @@ textarea, input{
       display: none;
     }
     &__column-first{
-      align-self: flex-end;
+      overflow: hidden;
+      padding-top: 200px;
+    } 
+    &__column-second{
+      padding-top: 200px;
     } 
     &__column-third{
-      align-self: flex-start;
+      padding-right: 12px;
+      padding-bottom: 200px;
     } 
     &__title{
       position: absolute;
-      top:80px;
+      top:60px;
       font-size: 34px;
       left: 0; 
       right: 0; 
@@ -1278,8 +1301,8 @@ textarea, input{
     }
   /*general styles desktop*/
     &__img{
-      max-width: 150px;
-      height: 160px;
+      max-width: 180px;
+      height: 180px;
       top: auto;
       left: auto;
       bottom: 0px;
@@ -1293,10 +1316,10 @@ textarea, input{
     &__one{
       &__img{
         bottom: 20px;
-        right: 10px;
+        right: 0px;
       }
       &__content{
-        padding: 43% 18%;
+        padding: 43% 17%;
       }
     }
     &__two{
@@ -1314,7 +1337,7 @@ textarea, input{
     }
     &__three{
       &__img{
-        right: 10%;
+        right: 8%;
       }
       &__content{
         padding: 54% 25% 0px 10%;
@@ -1341,15 +1364,18 @@ textarea, input{
       letter-spacing: 1.2px;
       }
   /*individual styles desktop*/
+    &__column-first{
+      min-width: 580px;
+    }
     &__one{
       max-width: 650px;
       &__img{
         bottom: -25px;
-        right: -60px;
+        right: -20px;
         }
       &__content{
         max-height: 686px!important;
-        padding: 43% 20%;
+        padding: 39% 20%;
         max-width: 550px;
         max-height: 730px;
         }
@@ -1379,7 +1405,20 @@ textarea, input{
     }  
   }
  }
-
+ @media (min-width: 1800px) { 
+ .reviews{
+  &__one{
+    max-width: 650px;
+    &__img{
+      bottom: -25px;
+      right: 10px;
+      }
+    }
+  &__three{
+      padding-right: 8px;
+   } 
+ }
+}
 @media (max-width: 1200px) { 
   .reviews__slider-wrapper{
     display: block;

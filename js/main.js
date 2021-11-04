@@ -8,7 +8,7 @@ $('.slider-nav').slick({
   prevArrow: '<button type="button" class="packs-slick-prevbtn packs-btn"></button>',
   responsive: [
     {
-      breakpoint: 1360,
+      breakpoint: 1,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 1
@@ -186,16 +186,16 @@ window.onclick = function (event) {
 };
 
 // reviews slider -> activate slider width resize
-$(window).resize(function () {
-  if ($(window).width() < 1200) {
-    $('.reviews__wrapper').addClass('reviews-slider');
-  }
-});
-$(window).resize(function () {
-  if ($(window).width() > 1200) {
-    $('.reviews__wrapper').removeClass('reviews-slider');
-  }
-});
+// $(window).resize(function () {
+//   if ($(window).width() < 1200) {
+//     $('.reviews__wrapper').addClass('reviews-slider');
+//   }
+// });
+// $(window).resize(function () {
+//   if ($(window).width() > 1200) {
+//     $('.reviews__wrapper').removeClass('reviews-slider');
+//   }
+// });
 
 // slick slider for reviews
 $(document).ready(function () {
@@ -214,7 +214,13 @@ $(document).ready(function () {
       responsive: [
         {
           breakpoint: 1200,
-          settings: "unslick"
+          settings: {
+            centerMode: false,
+            slidesToShow: 3,
+            initialSlide: 0,
+            slidesToScroll: 3,
+            speed: 600,
+          } //"unslick"
         }
 
       ]
