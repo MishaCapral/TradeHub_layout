@@ -213,8 +213,8 @@ textarea, input {
 }
 
 .dot__item {
-  -webkit-animation: scale 2.2s infinite cubic-bezier(0, 0, 0.49, 1.02);
-          animation: scale 2.2s infinite cubic-bezier(0, 0, 0.49, 1.02);
+  -webkit-animation: scale 2s infinite cubic-bezier(0, 0, 0.49, 1.02);
+          animation: scale 2s infinite cubic-bezier(0, 0, 0.49, 1.02);
   height: 15px;
   width: 15px;
   background-color: #d0d0d0;
@@ -223,10 +223,10 @@ textarea, input {
 }
 
 .dot__item::after {
-  -webkit-animation: scale 2.2s infinite cubic-bezier(0, 0, 0.49, 1.02);
-          animation: scale 2.2s infinite cubic-bezier(0, 0, 0.49, 1.02);
-  -webkit-animation-delay: 150ms;
-          animation-delay: 150ms;
+  -webkit-animation: scale 2s infinite cubic-bezier(0, 0, 0.49, 1.02);
+          animation: scale 2s infinite cubic-bezier(0, 0, 0.49, 1.02);
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms;
   content: "";
   position: absolute;
   bottom: 30px;
@@ -238,10 +238,10 @@ textarea, input {
 }
 
 .dot__item::before {
-  -webkit-animation: scale 2.2s infinite cubic-bezier(0, 0, 0.49, 1.02);
-          animation: scale 2.2s infinite cubic-bezier(0, 0, 0.49, 1.02);
-  -webkit-animation-delay: 300ms;
-          animation-delay: 300ms;
+  -webkit-animation: scale 2s infinite cubic-bezier(0, 0, 0.49, 1.02);
+          animation: scale 2s infinite cubic-bezier(0, 0, 0.49, 1.02);
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms;
   content: "";
   position: absolute;
   bottom: 60px;
@@ -762,7 +762,7 @@ textarea, input {
           transition-duration: 0.4s;
 }
 
-@media (max-width: 1360px) {
+@media (max-width: 1300px) {
   .slick-active-bottom4 .packs-slider__item {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
@@ -834,6 +834,7 @@ textarea, input {
           transform: translateY(0px);
   padding-right: 20px;
   padding-left: 20px;
+  padding-top: 55px;
 }
 
 .packs-slider__item {
@@ -963,7 +964,14 @@ textarea, input {
   }
 }
 
-@media (max-width: 1360px) {
+@media (max-width: 1380px) {
+  .packs-slider__content {
+    font-size: 14px;
+    padding: 15px 15px 0px 35px;
+  }
+}
+
+@media (max-width: 1300px) {
   .packs-slider__item {
     min-height: 717px;
   }
@@ -1038,7 +1046,7 @@ textarea, input {
   }
 }
 
-@media (max-width: 1360px) {
+@media (max-width: 1300px) {
   .vertical-line::before {
     top: 110px;
     left: 15px;

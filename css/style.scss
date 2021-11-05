@@ -639,7 +639,7 @@ textarea, input{
   transition-duration: 0.4s;
 }
 
-@media(max-width: 1360px){
+@media(max-width: 1300px){
   .slick-active-bottom4 .packs-slider__item{
     transform: translateY(0px);
   }
@@ -698,6 +698,7 @@ textarea, input{
   transform: translateY(0px);
   padding-right: 20px;
   padding-left: 20px;
+  padding-top: 55px;
   &__item{
     box-shadow: 8px 17px 17px -1px rgba(34, 60, 80, 0.5);
     margin: 0px auto;
@@ -822,7 +823,15 @@ textarea, input{
     }
   }
 }
-@media(max-width:1360px){
+@media(max-width:1380px){
+  .packs-slider{
+    &__content{
+      font-size: 14px;
+      padding: 15px 15px 0px 35px;
+    }
+  }
+}
+@media(max-width:1300px){
   .packs-slider{
     &__item{
       min-height: 717px;
@@ -895,7 +904,7 @@ textarea, input{
   width: 8px;
 }
 }
-@media(max-width:1360px){
+@media(max-width:1300px){
   .vertical-line::before{
     top: 110px;
     left: 15px;
