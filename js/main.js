@@ -8,7 +8,7 @@ $('.slider-nav').slick({
   prevArrow: '<button type="button" class="packs-slick-prevbtn packs-btn"></button>',
   responsive: [
     {
-      breakpoint: 1,
+      breakpoint: 1360,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 1
@@ -218,7 +218,7 @@ $(document).ready(function () {
             centerMode: false,
             slidesToShow: 3,
             initialSlide: 0,
-            slidesToScroll: 3,
+            slidesToScroll: 1,
             speed: 600,
           } //"unslick"
         }
