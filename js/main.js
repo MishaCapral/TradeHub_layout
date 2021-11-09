@@ -1,3 +1,22 @@
+//slow scroll in nav menu
+jQuery(document).ready(function () {
+  jQuery("a.scrollto").click(function () {
+    elementClick = jQuery(this).attr("href")
+    destination = jQuery(elementClick).offset().top;
+    jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 1100);
+    return false;
+  });
+});
+
+jQuery(document).ready(function () {
+  jQuery("a.scrollto-packs").click(function () {
+    elementClick = jQuery(this).attr("href")
+    destination = jQuery(elementClick).offset().top + 120;
+    jQuery("html:not(:animated),body:not(:animated)").animate({ scrollTop: destination }, 1100);
+    return false;
+  });
+});
+
 // packs slider
 let mobilePoint = 1100;
 $('.slider-nav').slick({

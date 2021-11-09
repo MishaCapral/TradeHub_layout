@@ -14,7 +14,7 @@
 <body>
   <div class="burger__wrapper">
 
-    <section class="hero">
+    <section class="hero" id="mainSection">
       <div class="burger__menu">
 
         <div class="burger__menu-btn" onclick="burgerButton(this)">
@@ -27,23 +27,23 @@
           <img class="logo-small-top" src="images/logo-small.png" alt="logo">
           <ul class="navigate">
             <li class="navigate__item">
-              <a href="#" class="navigate__link">Главная</a>
+              <a href="#mainSection" class="navigate__link scrollto">Главная</a>
             </li>
             <li class="navigate__item">
-              <a href="#" class="navigate__link">О нас</a>
+              <a href="#about-usSection" class="navigate__link scrollto">О нас</a>
             </li>
             <li class="navigate__item">
-              <a href="#" class="navigate__link">Пакеты</a>
+              <a href="#packsSection" class="navigate__link scrollto-packs">Пакеты</a>
             </li>
             <img class="logo-small-center" src="images/logo-small.png" alt="logo">
             <li class="navigate__item">
-              <a href="#" class="navigate__link">Сигналы</a>
+              <a href="#signalsSection" class="navigate__link scrollto">Сигналы</a>
             </li>
             <li class="navigate__item">
-              <a href="#" class="navigate__link">FAQ</a>
+              <a href="#faqSection" class="navigate__link scrollto">FAQ</a>
             </li>
             <li class="navigate__item">
-              <a href="#" class="navigate__link">Связь</a>
+              <a href="#connectionSection" class="navigate__link scrollto">Связь</a>
             </li>
           </ul>
         </nav>
@@ -60,7 +60,7 @@
     </section>
 
     <div class="burger__content">
-      <section class="about-us">
+      <section class="about-us" id="about-usSection">
         <div class="about-us__wrapper-0">
           <div class="about-us__wrapper-1">
             <div class="column">
@@ -151,7 +151,7 @@
         </div>
       </section>
 
-      <section class="packs">
+      <section class="packs" id="packsSection">
         <h2 class="packs__title">Пакеты</h2>
         <div class="packs-slider slider-nav wrapper">
 
@@ -282,7 +282,7 @@
         <div class="black-part-bottom"></div>
       </section>
 
-      <div class="signals">
+      <div class="signals" id="signalsSection">
         <h2 class="signal__title">Сигналы</h2>
 
         <div class="signals-slider wrapper">
@@ -383,7 +383,7 @@
             <img src="images/cross-2.png" alt="cross-3" class="curve-line__img-3">
           </div>
         </section>
-        <section class="faq wrapper">
+        <section class="faq wrapper" id="faqSection">
           <h2 class="faq__title">Faq</h2>
 
           <div class="faq__dropdown">
@@ -532,7 +532,7 @@
             </div>
           </section>
 
-          <section class="connection">
+          <section class="connection" id="connectionSection">
             <h2 class="connection__title">Связь с нами</h2>
             <div class="connection__wrapper">
 
