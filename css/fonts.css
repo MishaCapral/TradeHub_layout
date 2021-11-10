@@ -34,6 +34,13 @@
 }
 
 @font-face {
+  font-family: 'Montserrat-Bold';
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/Montserrat-Bold.woff") format("woff");
+}
+
+@font-face {
   font-family: 'Montserrat-Black';
   font-weight: 900;
   font-style: normal;
