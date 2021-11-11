@@ -1,6 +1,11 @@
 @import 'vars';
 @import url('fonts.css');
 
+#myBtn {
+  width: 70px;
+  height: 50px;
+  background-color: white
+}
 
 html{
   box-sizing: border-box;
@@ -624,15 +629,20 @@ textarea, input{
 .black-part-bottom{
   transform: translateY(3px);
   width: 100%;
-  height: 270px;
+  height: 200px;
   background-color:#000;
   position: absolute;
   bottom: 0px;
   z-index: -1;
 }
+@media(min-width: 1520px){
+  .black-part-bottom{
+    height: 170px;
+  }
+}
 /* active center item to bottom */
 .slick-active-bottom4 .packs-slider__item{
-  transform: translateY(150px);
+  transform: translateY(70px);
   transition-duration: 0.4s;
 }
 
@@ -641,7 +651,7 @@ textarea, input{
     transform: translateY(0px);
   }
   .slick-active-bottom3 .packs-slider__item{
-    transform: translateY(150px);
+    transform: translateY(70px);
     transition-duration: 0.4s;
   }
 }
@@ -916,7 +926,22 @@ textarea, input{
   }
 }
 }
-
+/* change height */
+@media(min-width:1100px){
+  .packs{
+    max-height: 1100px;
+  }
+}
+@media(min-width:1300px){
+  .packs{
+    max-height: 950px;
+  }
+}
+@media(min-width:1680px){
+  .packs{
+    max-height: 1070px;
+  }
+}
 
 /* ____ Section signals ____ */
 
@@ -1551,4 +1576,420 @@ textarea, input{
   }
 }
 
-/*--------------*/
+/*----------------------------------------*/
+/*----------------------------------------*/
+/* ____ Modal window ____ */
+
+/* The Modal (background) */
+.modal {
+  display: none; 
+  position: fixed; 
+  z-index: 5; 
+  padding-top: 40px; 
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  border: 3px solid #888;
+  width: 95%;
+  height: 95%;
+  position: relative;
+}
+@media(max-width: 768px){
+  .modal {
+    padding-top: 0px;
+  } 
+  .modal-content {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 9;
+  background-image: url("../images/purchase-images/arrow-back.png");
+  background-size: contain;
+  width: 40px;
+  height: 40px;
+}
+// @media(max-width: 1100px){
+//   .close{
+//   display: none;
+//   }
+// }
+
+
+/*----------------------------------------*/
+/* ____ Modal content ____ */
+
+/* ____ Section whitePart ____ */
+.whitePart{
+  padding: 0px 20px;
+  max-width: 100%;
+  background: url("../images/purchase-images/texture-whitePart.png") no-repeat;
+  background-size: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+@media(min-width: 768px){
+  .whitePart{
+    padding: 0px 30px;
+    background: url("../images/purchase-images/texture-whitePart-desktop.png") no-repeat;
+    background-size: 100% 100%;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    width: 75%;
+    height: 100%;
+  }
+}
+/*img pack*/
+.pack{
+  &__wrapper{
+    position: relative;
+    display: flex;
+    justify-content: center;
+  }
+  &__item{
+    padding: 110px 40px 90px 40px;
+    max-width: 100%;
+  }
+  &__toning{
+    position: absolute;
+    top: 95px;
+    left: 0px;
+    max-width: 100%;
+    opacity: 0.45;
+  }
+}
+@media(min-width: 768px){
+  .pack{
+    &__wrapper{
+      width: 340px;
+    }
+    &__item{
+      padding: 0px 0px 0px 0px;
+      width: 270px;
+    }
+    &__toning{
+      width: 340px;
+      top: -20px;
+    }
+  }
+  /*adaptive height in desktop*/
+@media(max-height: 600px){
+  .pack{
+    &__wrapper{
+      width: 270px;
+    }
+    &__item{
+      padding: 0px 0px 0px 0px;
+      width: 200px;
+    }
+    &__toning{
+      width: 270px;
+      top: -20px;
+    }
+  }
+}
+}
+
+/*column width description, add photo and cards*/
+.payment{
+  padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  &__wrapper{
+    max-width: 420px;
+  }
+  &__title{
+    font-family: 'Montserrat-Bold', Arial, Helvetica;
+    font-size: 36px;
+    padding-bottom: 35px;
+  }
+  &__description{
+    font-family: 'Montserrat-Light', Arial, Helvetica;
+    font-size: 28px;
+    padding-bottom: 100px;
+    max-width: 420px;
+  }
+}
+@media(min-width: 768px){
+  .payment{
+    padding: unset;
+    max-width: 450px;
+    align-items: flex-start;
+    &__wrapper{
+      width: 100%;
+      display: flex;
+      flex-direction: column-reverse;
+    }
+    &__title{
+      font-size: 3.6vh;
+      padding-bottom: 10px;
+      align-self: center;
+    }
+    &__description{
+      padding-bottom: 20px;
+      max-width: 720px;
+      font-size: 2.5vh;
+    }
+  }
+}
+
+/*credit cards*/
+.card{
+  border-bottom: 4px solid #ff9900;
+  position: relative;
+  min-height: 220px;
+  margin-bottom: 10px;
+  &__type{
+    padding-top: 25px;
+    font-family: 'Montserrat-Black', Arial, Helvetica;
+    font-size: 36px;
+    text-transform: uppercase;
+  }
+  &__iconsWrapper{
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  &__copyIcon{
+    position: relative;
+    bottom: 10px;
+  }
+  &__title{
+    margin-top: 80px;
+    font-family: 'Montserrat-Light', Arial, Helvetica;
+    font-size: 25px;
+    display: inline-block;
+  }
+  &__subtitle{
+    margin-top: 80px;
+    font-family: 'Montserrat-Black', Arial, Helvetica;
+    font-size: 25px;
+    text-transform: uppercase;
+  }
+  &__number{
+    padding-top: 3px;
+    font-family: 'Montserrat-Black', Arial, Helvetica;
+    font-size: 15px;
+    word-break: break-all;
+  }
+}
+@media(min-width: 768px){
+  .cards{
+    padding-right: 35px;
+  }
+  .card{
+    min-height: 85px;
+    &__type{
+      padding-top: 10px;
+      font-size: 3.2vh;
+    }
+    &__iconsWrapper{
+      right: -50px;
+      top: -5px;
+    }
+    &__copyIcon{
+      display: none;
+    }
+    &__title{
+      margin-top: 30px;
+      font-size: 2vh; 
+    }
+    &__subtitle{
+      margin-top: 30px; 
+      font-size:  2vh;
+    }
+    &__number{
+      padding-bottom: 10px;
+      font-size: 1.4vh;
+      padding-right: 98px;
+    }
+    &__qrIcon{
+      width: 70%;
+    }
+  }
+}
+
+/*input -> add photo*/
+.addPhoto{
+  height: 490px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__input{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 268px;
+    height: 270px;
+    background-image: url("../images/purchase-images/addPhoto-wrapper.png");
+    background-repeat: no-repeat;
+  }
+  &__customInput{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    border-radius: 50px;
+  }
+  &__iconWrapper{
+    position: relative;
+  }
+  &__text{
+    font-family: 'Montserrat-Bold', Arial, Helvetica;
+    font-size: 34px;
+    position: absolute;
+    text-align: center;
+    top: 15px;
+    left: -35px;
+  }
+}
+@media(min-width: 768px){
+  .addPhoto{
+    height: 120px;
+    justify-content: flex-start;
+  
+  &__input{
+    width: 110px;
+    height: 100px;
+    background-size: contain;
+  }
+  &__input input{
+    position: absolute;
+    z-index: 1;
+    height: 100px;
+    width: 100%;
+  }
+  &__icon{
+    width: 50%;
+    position: relative;
+    left: 22px;
+  }
+  &__text{
+    font-size: 15px;
+    top: 13px;
+    left: -9px;
+  }
+}
+}
+
+
+/* ____ Section blackPart ____ */
+.blackPart{
+  height: 980px;
+  max-width: 100%;
+  background-image: url("../images/purchase-images/texture-blackPart-mobile.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+}
+@media(min-width: 768px){
+  .blackPart{
+    
+    height: 100%;
+    width: 25%;
+    
+  }
+}
+
+/*client form*/
+.clientInfo{
+  padding-top: 100px;
+  max-width: 520px;
+  &__wrapper{
+    display: flex;
+    align-items: top;
+    justify-content: center;
+    height: 690px;
+    background-image: url("../images/purchase-images/texture-connection.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+  &__form{
+    max-width: 60%;
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+    color:#ff9900;
+  }
+  &__input{
+    font-family: 'Montserrat-Light', Arial, Helvetica;
+    font-size: 23px;
+    margin-top: 60px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #ff9900 ;
+    color: #ff9900!important;
+    background-color: transparent;
+  }
+  &__submit{
+    font-family: 'Montserrat-Bold', Arial, Helvetica;
+    font-size: 29px;
+    color: #ffff;
+    background-color: transparent;
+    border: 5px solid #ff9900;
+    border-radius: 100px;
+    padding: 15px;
+    margin-top: 45px;
+  }
+}
+@media(min-width: 768px){
+  .clientInfo{
+    height: 100%;
+    width: 90%;
+    &__wrapper{
+      height: 80%;
+    }
+    &__form{
+      max-width: 65%;
+      padding-top: 15%;
+    }
+    &__input{
+      font-size: 2vh;
+      margin-top: 15%;
+      padding-bottom: 5px;
+    }
+    &__submit{
+      font-size: 2.7vh;
+      border: 4px solid #ff9900;
+      padding: 10px;
+      margin-top: 20%;
+    }
+  }
+  /*adaptive height in desktop*/
+@media(max-height: 600px){
+  .clientInfo{
+    &__form{
+      padding-top: 5%;
+    }
+  }
+}
+}
+
+/*wrapper for desktop*/
+@media(min-width: 768px){
+  .wrapperPurchase{
+    display: flex;
+    flex-direction: row-reverse;
+    height: 100%;
+  }
+}

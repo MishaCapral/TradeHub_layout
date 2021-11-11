@@ -12,6 +12,8 @@
 </head>
 
 <body>
+
+
   <div class="burger__wrapper">
 
     <section class="hero" id="mainSection">
@@ -68,6 +70,12 @@
 
                 <div class="item">
                   <div class="item__1 _anim-items">
+
+
+                    <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                    <button id="myBtn">Open Modal</button>
+
+
                     <a href="#" class="item__description">Бесплатно</a>
                     <p class="item__sub-description hidden">1</p>
                     <div class="item__content">Телеграмм канал, чат с&nbsp;трейдерами, ежедневные актуальные
@@ -557,19 +565,107 @@
       </form>
       </section>
 
+      <!--end light-part-wrapper -->
     </div>
-    <!-- light-part-wrapper -->
 
+    <!--end burger-content -->
   </div>
-  <!--burger-content -->
 
+  <!--end burger__wrapper -->
   </div>
-  <!--burger__wrapper -->
+
+
+  <!-- Modal window -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+
+      <div class="wrapperPurchase">
+        <div class="whitePart">
+
+          <section class="pack">
+            <div class="pack__wrapper">
+              <img class="pack__item" src="images/purchase-images/pack.png" alt="pack item">
+              <img class="pack__toning" src="images/purchase-images/texture-packs-black.png" alt="pack black pack">
+            </div>
+          </section>
+
+          <section class="payment">
+            <h1 class="payment__title">Купить</h1>
+            <p class="payment__description">Выберите один из двух удобных для вас способов оплаты и прикрепите фото
+              платежа.
+            </p>
+            <div class="payment__wrapper">
+              <section class="cards">
+                <div class="card">
+                  <h3 class="card__type">visa</h3>
+                  <div class="card__iconsWrapper">
+                    <img class="card__copyIcon" src="images/purchase-images/icon-copy.png" alt="icon copy">
+                    <img class="card__qrIcon" src="images/purchase-images/icon-qr-1.png" alt="QR-code 1">
+                  </div>
+                  <p class="card__title">Норма карты</p>
+                  <p class="card__number">4149629350129284</p>
+                </div>
+                <div class="card">
+                  <h3 class="card__type">usdt</h3>
+                  <div class="card__iconsWrapper">
+                    <img class="card__copyIcon" src="images/purchase-images/icon-copy.png" alt="icon copy">
+                    <img class="card__qrIcon" src="images/purchase-images/icon-qr-2.png" alt="QR-code 1">
+                  </div>
+                  <p class="card__title">Сеть:</p>
+                  <span class="card__subtitle"> TRC20</span>
+                  <p class="card__number">TW3PpETgWa2twGCwZeBZLZUBxPRYFoTG2Z</p>
+                </div>
+              </section>
+
+              <section class="addPhoto">
+                <div class="addPhoto__input">
+                  <label for="file-upload" class="addPhoto__customInput"></label>
+                  <input type="file" id="file-upload" multiple autocomplete="off" tabindex="-1" style="display: none;">
+                  <div class="addPhoto__iconWrapper">
+                    <img class="addPhoto__icon" src="images/purchase-images/addPhoto-icon.png" alt="add photo icon">
+                    <p class="addPhoto__text">Загрузить
+                      фото</p>
+                  </div>
+                </div>
+              </section>
+
+              <!-- end payment__wrapper -->
+            </div>
+
+            <!-- end payment -->
+          </section>
+
+          <!-- end whitePart -->
+        </div>
+
+        <div class="blackPart">
+          <div class="clientInfo">
+            <div class="clientInfo__wrapper">
+              <form action="#" class="clientInfo__form">
+                <input type="text" id="name" placeholder="Имя" class="clientInfo__input">
+                <input type="text" id="surname" placeholder="Фамилия" class="clientInfo__input">
+                <input type="tel" id="phone" placeholder="Номер" class="clientInfo__input">
+                <input type="text" id="telegram" placeholder="@TELEGRAM" class="clientInfo__input">
+                <input type="submit" value="Купить" class="clientInfo__submit">
+            </div>
+          </div>
+        </div>
+
+        <!-- end wrapperPurchase -->
+      </div>
+
+      <!-- end modal content -->
+    </div>
+
+    <!-- end myModal -->
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="libs/slick/slick.min.js"></script>
   <script src="js/main.js"></script>
-
 </body>
 
 </html>
