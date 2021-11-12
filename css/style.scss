@@ -1680,10 +1680,19 @@ textarea, input{
   right: 10px;
   top: 10px;
   z-index: 9;
-  background-image: url("../images/purchase-images/arrow-back.png");
+  background-image: url("../images/purchase-images/arrow-back1.svg");
   background-size: contain;
-  width: 40px;
-  height: 40px;
+  width: 37px;
+  height: 37px;
+  border-radius: 50px;
+}
+
+.close:hover{
+  box-shadow: 0px 0px 10px 8px rgba(255, 153, 0, 0.36),0px 0px 38px 25px rgba(255, 153, 0, 0.40) inset;
+  transition: 0.3s;
+}
+.close:not(:hover){
+  transition: 0.7s;
 }
 // @media(max-width: 1100px){
 //   .close{
@@ -2002,6 +2011,12 @@ textarea, input{
     color: #ff9900!important;
     background-color: transparent;
   }
+  &__input::placeholder{
+    color: #ff9900;
+  }
+  &__input:focus{
+    outline: none;
+  }
   &__submit{
     font-family: 'Montserrat-Bold', Arial, Helvetica;
     font-size: 29px;
@@ -2012,7 +2027,15 @@ textarea, input{
     padding: 15px;
     margin-top: 45px;
   }
+  &__submit:hover{
+    box-shadow: 0px 0px 30px 10px rgba(255, 153, 0, 0.45),0px 0px 30px 9px rgba(255, 153, 0, 0.45) inset;
+    transition: 0.3s;
+  }
+  &__submit:not(:hover){
+    transition: 0.7s;
+  }
 }
+
 @media(min-width: 768px){
   .clientInfo{
     height: 100%;

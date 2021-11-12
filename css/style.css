@@ -1927,10 +1927,23 @@ textarea, input {
   right: 10px;
   top: 10px;
   z-index: 9;
-  background-image: url("../images/purchase-images/arrow-back.png");
+  background-image: url("../images/purchase-images/arrow-back1.svg");
   background-size: contain;
-  width: 40px;
-  height: 40px;
+  width: 37px;
+  height: 37px;
+  border-radius: 50px;
+}
+
+.close:hover {
+  -webkit-box-shadow: 0px 0px 10px 8px rgba(255, 153, 0, 0.36), 0px 0px 38px 25px rgba(255, 153, 0, 0.4) inset;
+          box-shadow: 0px 0px 10px 8px rgba(255, 153, 0, 0.36), 0px 0px 38px 25px rgba(255, 153, 0, 0.4) inset;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.close:not(:hover) {
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
 }
 
 /*----------------------------------------*/
@@ -2323,6 +2336,26 @@ textarea, input {
   background-color: transparent;
 }
 
+.clientInfo__input::-webkit-input-placeholder {
+  color: #ff9900;
+}
+
+.clientInfo__input:-ms-input-placeholder {
+  color: #ff9900;
+}
+
+.clientInfo__input::-ms-input-placeholder {
+  color: #ff9900;
+}
+
+.clientInfo__input::placeholder {
+  color: #ff9900;
+}
+
+.clientInfo__input:focus {
+  outline: none;
+}
+
 .clientInfo__submit {
   font-family: 'Montserrat-Bold', Arial, Helvetica;
   font-size: 29px;
@@ -2332,6 +2365,18 @@ textarea, input {
   border-radius: 100px;
   padding: 15px;
   margin-top: 45px;
+}
+
+.clientInfo__submit:hover {
+  -webkit-box-shadow: 0px 0px 30px 10px rgba(255, 153, 0, 0.45), 0px 0px 30px 9px rgba(255, 153, 0, 0.45) inset;
+          box-shadow: 0px 0px 30px 10px rgba(255, 153, 0, 0.45), 0px 0px 30px 9px rgba(255, 153, 0, 0.45) inset;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.clientInfo__submit:not(:hover) {
+  -webkit-transition: 0.7s;
+  transition: 0.7s;
 }
 
 @media (min-width: 768px) {
