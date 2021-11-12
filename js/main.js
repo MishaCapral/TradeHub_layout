@@ -257,12 +257,14 @@ $(document).ready(function () {
 //modal window
 //take in https://www.w3schools.com/howto/howto_css_modals.asp
 var modal = document.getElementById("myModal");
-var btn1 = document.getElementById("buy1");
-var btn2 = document.getElementById("buy2");
-var btn3 = document.getElementById("buy3");
-var btn4 = document.getElementById("buy4");
-var btn5 = document.getElementById("buy5");
-var btn6 = document.getElementById("buy6");
+
+//var btn1 = document.getElementById("buy1");
+
+// var btn2 = document.getElementById("buy2");
+// var btn3 = document.getElementById("buy3");
+// var btn4 = document.getElementById("buy4");
+// var btn5 = document.getElementById("buy5");
+// var btn6 = document.getElementById("buy6");
 
 var span = document.getElementsByClassName("close")[0];
 
@@ -271,6 +273,8 @@ var span = document.getElementsByClassName("close")[0];
 //   modal.style.display = "block";
 //   document.getElementById("pack_buy").src = "images/purchase-images/pack-1(350usd).png"
 // }
+
+
 
 function buyOne() {
   modal.style.display = "block";
@@ -289,12 +293,12 @@ function buyFour() {
   document.getElementById("pack_buy").src = "images/purchase-images/pack-4(350usd).png"
 }
 
-btn1.addEventListener("click", buyOne);
-btn2.addEventListener("click", buyTwo);
-btn3.addEventListener("click", buyThree);
-btn4.addEventListener("click", buyFour);
-btn5.addEventListener("click", buyOne);
-btn6.addEventListener("click", buyTwo);
+//btn1.addEventListener("click", buyOne);
+// btn2.addEventListener("click", buyTwo);
+// btn3.addEventListener("click", buyThree);
+// btn4.addEventListener("click", buyFour);
+// btn5.addEventListener("click", buyOne);
+// btn6.addEventListener("click", buyTwo);
 
 span.onclick = function () {
   modal.style.display = "none";
